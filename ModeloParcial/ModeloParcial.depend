@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1506176219 source:d:\luzr\modeloparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1506179405 d:\luzr\modeloparcial\lib.h
+
+1506181093 source:d:\luzr\modeloparcial\lib.c
+	"lib.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+

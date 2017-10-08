@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1507039684 source:c:\users\alumno\desktop\rubini.luz\lib.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1507039678 c:\users\alumno\desktop\rubini.luz\lib.h
+
+1507039690 source:c:\users\alumno\desktop\rubini.luz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1507042497 source:d:\rubini.luz\lib.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1507042497 d:\rubini.luz\lib.h
+
+1507042504 source:d:\rubini.luz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+

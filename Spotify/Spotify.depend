@@ -1,0 +1,149 @@
+# depslib dependency file v1.0
+1506434920 source:c:\users\alumno\desktop\spotify\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1506433020 c:\users\alumno\desktop\spotify\funciones.h
+
+1506984121 source:c:\users\luz\desktop\laboratorioyprog1\spotify\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesValidacion.h"
+
+1506984121 c:\users\luz\desktop\laboratorioyprog1\spotify\funciones.h
+
+1506984121 source:c:\users\luz\desktop\laboratorioyprog1\spotify\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1505830044 source:c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesValidacion.h"
+
+1505826852 c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funciones.h
+
+1505831813 source:c:\users\alumno\desktop\laboratorioyprog1-master\spotify\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1505831238 source:c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesmostrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesValidacion.h"
+
+1505827390 c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesmostrar.h
+
+1505830042 source:c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesabm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1505826754 c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesabm.h
+
+1505829970 c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesvalidacion.h
+
+1505830095 source:c:\users\alumno\desktop\laboratorioyprog1-master\spotify\funcionesvalidacion.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1506434858 D
+
+1505859685 c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesvalidacion.h
+
+1505859685 source:c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesabm.c
+
+1506434577 source:c:\users\alumno\desktop\spotify\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesValidacion.h"
+
+1506427604 c:\users\alumno\desktop\spotify\funcionesvalidacion.h
+
+1506427604 source:c:\users\alumno\desktop\spotify\funcionesabm.c
+
+1506427604 gin/master
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesValidacion.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesABM.h"
+	"funcionesValidacion.h"
+
+1506984121 c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesmostrar.h
+
+1505859685 c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesabm.h
+
+1506984121 source:c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesmostrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"funcionesMostrar.h"
+	"funcionesValidacion.h"
+
+1506434662 c:\users\alumno\desktop\spotify\funcionesmostrar.h
+
+1506427604 c:\users\alumno\desktop\spotify\funcionesabm.h
+
+1506434858 source:c:\users\alumno\desktop\spotify\funcionesmostrar.c
+
+1505859685 source:c:\users\luz\desktop\laboratorioyprog1\spotify\funcionesvalidacion.c
+
+1506427604 source:c:\users\alumno\desktop\spotify\funcionesvalidacion.c
+

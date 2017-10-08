@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1505140976 source:c:\users\alumno\desktop\abm vectores paralelos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Alumnos.h"
+
+1505141200 source:c:\users\alumno\desktop\abm vectores paralelos\alumnos.c
+	<stdio.h>
+	"Alumnos.h"
+
+1505140461 c:\users\alumno\desktop\abm vectores paralelos\alumnos.h
+
