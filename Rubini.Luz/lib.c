@@ -69,6 +69,16 @@ void nuevoAlquiler(eCliente cliente[], eAlquiler alquiler[],int tamA, int tamC)
         printf("No hay mas espacio.\n");
     }
 }
+void inicializarContadores(eContadores contadores[])
+{
+    int i;
+    for(i=0;i<3;i++)
+    {
+        contadores[i].contAmoladora=0;
+        contadores[i].contTaladro=0;
+        contadores[i].contMezcladora=0;
+    }
+}
 void inicializarEstadoCliente(eCliente cliente[],int tam)
 {
     int i;
@@ -158,11 +168,7 @@ void eliminarCliente(eCliente cliente[],int tam)
         printf("\nEste cliente no existe\n");
     }
 }
-void informar(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC)
-{
-    clienteConMasReclamos(cliente,alquiler,tamC);
-    mostrarAlquilerPorCliente(cliente,alquiler,tamA,tamC);
-}
+
 void mostrarAlquilerPorCliente(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC)
 {
     int i;
@@ -185,6 +191,7 @@ void mostrarAlquilerPorCliente(eCliente cliente[],eAlquiler alquiler[],int tamA,
             }
         }
     }
+    printf("-----------------------------------\n");
 }
 void inicializarCliente(eCliente cliente [])
 {
@@ -227,6 +234,13 @@ void inicializarAlquiler(eAlquiler alquiler[],eCliente cliente[])
         strcpy(alquiler[i].operador,operador[i]);
         alquiler[i].estadoAlquiler=4;
         alquiler[i].estado=1;
+        for(j=0;j<5;j++)
+        {
+            if(cliente[j].id==alquiler[i].idCliente)
+            {
+              cliente[j].contador++;
+            }
+        }
     }
 }
 void mostrarCliente(eCliente cliente[],int i)
@@ -248,39 +262,6 @@ void mostrarAlquiler(eAlquiler alquiler[],int i)
             break;
         }
 
-}
-void finAlquiler(eAlquiler alquiler[],eCliente cliente[],int tamA)
-{
-    int i,j;
-    int idAlquiler;
-
-    printf("Ingrese id de alquiler: ");
-    scanf("%d",&idAlquiler);
-    for(i=0;i<tamA;i++)
-    {
-
-        if(alquiler[i].estado==1 && idAlquiler==alquiler[i].idAlquiler)
-        {
-            for(j=0;j<5;j++)
-            {
-                if(cliente[j].id==alquiler[i].idCliente)
-                {
-                    mostrarCliente(cliente,j);
-                    mostrarAlquiler(alquiler,j);
-                    alquiler[i].estadoAlquiler=5;
-                    printf("Ingrese tiempo de alquiler: ");
-                    scanf("%f",&alquiler[i].tiempoReal);
-                    break;
-                }
-
-            }
-            break;
-        }
-    }
-    if(i==tamA)
-    {
-        printf("Ese alquiler no existe");
-    }
 }
 void clienteConMasReclamos(eCliente cliente[],eAlquiler alquiler[],int tam)
 {
@@ -313,5 +294,53 @@ void clienteConMasReclamos(eCliente cliente[],eAlquiler alquiler[],int tam)
             mostrarCliente(cliente,j);
         }
     }
+    printf("-----------------------------------\n");
 
+}
+void finAlquiler(eAlquiler alquiler[],eCliente cliente[],int tamA)
+{
+    int i,j;
+    int idAlquiler;
+
+    printf("Ingrese id de alquiler: ");
+    scanf("%d",&idAlquiler);
+    for(i=0;i<tamA;i++)
+    {
+
+        if(alquiler[i].estado==1 && idAlquiler==alquiler[i].idAlquiler)
+        {
+            for(j=0;j<5;j++)
+            {
+                if(cliente[j].id==alquiler[i].idCliente)
+                {
+                    mostrarCliente(cliente,j);
+                    mostrarAlquiler(alquiler,j);
+                    alquiler[i].estadoAlquiler=5;
+                    printf("Ingrese tiempo de alquiler: ");
+                    scanf("%f",&alquiler[i].tiempoReal);
+                    printf("Fin de llamada realizado con exito! ");
+                    break;
+                }
+
+            }
+            break;
+        }
+    }
+    if(i==tamA)
+    {
+        printf("Ese alquiler no existe");
+    }
+}
+void promedioReal(eAlquiler alquiler[],)
+{
+
+}
+void equipoMasAlquilado(eAlquiler)
+{
+
+}
+void informar(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC)
+{
+    clienteConMasReclamos(cliente,alquiler,tamC);
+    mostrarAlquilerPorCliente(cliente,alquiler,tamA,tamC);
 }

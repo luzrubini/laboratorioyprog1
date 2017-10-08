@@ -29,3 +29,18 @@
 	<stdlib.h>
 	"lib.h"
 
+1507505446 source:c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\lib.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+	<string.h>
+	<ctype.h>
+	<conio.h>
+
+1507506573 c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\lib.h
+
+1507028346 source:c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+

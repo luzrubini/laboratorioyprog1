@@ -25,6 +25,13 @@ typedef struct
     float tiempoReal;
     int estado;
 }eAlquiler;
+typedef struct
+{
+    int contTaladro;
+    int contAmoladora;
+    int contMezcladora;
+
+}eContadores;
 
 /**
  * Da de alta a un cliente
