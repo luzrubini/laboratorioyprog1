@@ -8,6 +8,7 @@ int main()
 {
     eCliente cliente[TAMC];
     eAlquiler alquiler[TAMA];
+    eEquipos equipos[3];
     inicializarEstadoCliente(cliente,TAMC);
     inicializarEstadoAlquiler(alquiler,TAMA);
     inicializarCliente(cliente);
@@ -49,7 +50,7 @@ int main()
                 finAlquiler(alquiler,cliente,TAMA);
                 break;
             case 6:
-                informar(cliente,alquiler,TAMA,TAMC);
+                informar(cliente,alquiler,TAMA,TAMC,equipos);
                 break;
             case 7:
             seguir = 'n';

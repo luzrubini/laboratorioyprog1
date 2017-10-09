@@ -27,11 +27,12 @@ typedef struct
 }eAlquiler;
 typedef struct
 {
-    int contTaladro;
-    int contAmoladora;
-    int contMezcladora;
+    int equipo;
+    int cont;
+    float acum;
+    float promedioReal;
 
-}eContadores;
+}eEquipos;
 
 /**
  * Da de alta a un cliente
@@ -80,7 +81,7 @@ void mostrarAlquilerPorCliente(eCliente[],eAlquiler[],int,int);
  * @param tamaño de la estructura eAlquiler entero.
  * @return
  */
-void informar(eCliente[],eAlquiler[],int,int);
+void informar(eCliente[],eAlquiler[],int,int,eEquipos[]);
 /**
  * Inicializa clientes
  * @param estructura eCliente.

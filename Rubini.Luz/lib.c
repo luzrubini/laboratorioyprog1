@@ -60,6 +60,11 @@ void nuevoAlquiler(eCliente cliente[], eAlquiler alquiler[],int tamA, int tamC)
                     cliente[j].contador++;
                     break;
                 }
+                else
+                {
+                    printf("Ese dni no existe!");
+                    break;
+                }
             }
             break;
         }
@@ -69,14 +74,14 @@ void nuevoAlquiler(eCliente cliente[], eAlquiler alquiler[],int tamA, int tamC)
         printf("No hay mas espacio.\n");
     }
 }
-void inicializarContadores(eContadores contadores[])
+void inicializarContAcum(eEquipos equipo[])
 {
     int i;
     for(i=0;i<3;i++)
     {
-        contadores[i].contAmoladora=0;
-        contadores[i].contTaladro=0;
-        contadores[i].contMezcladora=0;
+        equipo[i].cont=0;
+        equipo[i].acum=0;
+        equipo[i].equipo=i+1;
     }
 }
 void inicializarEstadoCliente(eCliente cliente[],int tam)
@@ -168,7 +173,6 @@ void eliminarCliente(eCliente cliente[],int tam)
         printf("\nEste cliente no existe\n");
     }
 }
-
 void mostrarAlquilerPorCliente(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC)
 {
     int i;
@@ -331,16 +335,127 @@ void finAlquiler(eAlquiler alquiler[],eCliente cliente[],int tamA)
         printf("Ese alquiler no existe");
     }
 }
-void promedioReal(eAlquiler alquiler[],)
+void equipoMasAlquilado(eAlquiler alquiler[], eEquipos equipos[],int tamA)
 {
+    int i, flag=0;
+    int maximo;
+    inicializarContAcum(equipos);
+    for(i=0; i<tamA; i++)
+    {
+        switch(alquiler[i].equipo)
+        {
+            case Amoladora:
+                equipos[0].cont++;
+                break;
+            case Mezcladora:
+                equipos[1].cont++;
+                break;
+            case Taladro:
+                equipos[2].cont++;
+                break;
+        }
+    }
+    for(i=0; i<3; i++)
+    {
+        if(flag==0 || equipos[i].cont>maximo)
+        {
+            maximo = equipos[i].cont;
+            flag=1;
+        }
+    }
+    printf("EQUIPOS MAS ALQUILADOS: \nCantidad: %d\n",maximo);
+    for(i=0; i<3; i++)
+    {
+        if(maximo==equipos[i].cont)
+        {
+            switch(equipos[i].equipo)
+            {
+            case Amoladora:
+                printf("Amoladora\n");
+                break;
+            case Mezcladora:
+                printf("Mezcladora\n");
+                break;
+            case Taladro:
+                printf("Taladro\n");
+                break;
+            }
+        }
 
+    }
+    printf("-----------------------------------\n");
 }
-void equipoMasAlquilado(eAlquiler)
+void promedioReal(eAlquiler alquiler[],eEquipos equipo[],int tamA)
 {
+    inicializarContAcum(equipo);
+    int i;
+    int flag=0;
+    float maximo;
+    for(i=0;i<tamA;i++)
+    {
 
+        if(alquiler[i].estadoAlquiler==Finalizado)
+        {
+            switch(alquiler[i].equipo)
+            {
+            case Amoladora:
+                equipo[0].cont++;
+                equipo[0].acum+=alquiler[i].tiempoReal;
+                break;
+            case Taladro:
+                equipo[1].cont++;
+                equipo[1].acum+=alquiler[i].tiempoReal;
+                break;
+            case Mezcladora:
+                equipo[2].cont++;
+                equipo[2].acum+=alquiler[i].tiempoReal;
+                break;
+            }
+
+
+        }
+    }
+
+     for(i=0;i<3;i++)
+    {
+        equipo[i].promedioReal = equipo[i].acum/equipo[i].cont;
+    }
+
+    for(i=0;i<3;i++)
+    {
+        if(flag==0||equipo[i].promedioReal>maximo)
+        {
+            maximo=equipo[i].promedioReal;
+            flag=1;
+        }
+    }
+
+    printf("EQUIPOS CON PROMEDIO MAS ALTO DE REPARACION: \nPromedio: %f\n",maximo);
+    for(i=0;i<3;i++)
+    {
+        if(maximo==equipo[i].promedioReal)
+        {
+            switch(equipo[i].equipo)
+            {
+            case Amoladora:
+                printf("Amoladora\n");
+                break;
+            case Mezcladora:
+                printf("Mezcladora\n");
+                break;
+            case Taladro:
+                printf("Taladro\n");
+                break;
+            }
+        }
+    }
+    printf("-----------------------------------\n");
 }
-void informar(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC)
+void informar(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC,eEquipos equipo[])
 {
     clienteConMasReclamos(cliente,alquiler,tamC);
     mostrarAlquilerPorCliente(cliente,alquiler,tamA,tamC);
+    equipoMasAlquilado(alquiler,equipo,tamA);
+    promedioReal(alquiler,equipo,tamA);
+
 }
