@@ -30,6 +30,11 @@ int main()
         printf("7- Salir\n");
 
         scanf("%d",&opcion);
+        while(opcion<1 || opcion>7)
+        {
+            printf("Error! Ingrese una opcion valida: ");
+            scanf("%d",&opcion);
+        }
 
 
         switch(opcion)

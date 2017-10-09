@@ -7,6 +7,7 @@
 void altaCliente(eCliente cliente[],int tam)
 {
     int i;
+    int dni;
     for(i=0;i<tam;i++)
     {
         if(cliente[i].estado==0)
@@ -22,7 +23,9 @@ void altaCliente(eCliente cliente[],int tam)
             strcat(cliente[i].nombreApellido,", ");
             strcat(cliente[i].nombreApellido,cliente[i].nombre);
             printf("Ingrese dni: ");
-            scanf("%d",&cliente[i].dni);
+            scanf("%d",&dni);
+            dni=validarDNI(dni,cliente,tam);
+            cliente[i].dni=dni;
             cliente[i].estado=1;
             break;
         }
@@ -82,6 +85,7 @@ void inicializarContAcum(eEquipos equipo[])
         equipo[i].cont=0;
         equipo[i].acum=0;
         equipo[i].equipo=i+1;
+        equipo[i].promedioReal=0;
     }
 }
 void inicializarEstadoCliente(eCliente cliente[],int tam)
@@ -267,7 +271,7 @@ void mostrarAlquiler(eAlquiler alquiler[],int i)
         }
 
 }
-void clienteConMasReclamos(eCliente cliente[],eAlquiler alquiler[],int tam)
+void clienteConMasAlquileres(eCliente cliente[],eAlquiler alquiler[],int tam)
 {
     int j;
     int maximo;
@@ -418,7 +422,7 @@ void promedioReal(eAlquiler alquiler[],eEquipos equipo[],int tamA)
 
      for(i=0;i<3;i++)
     {
-        equipo[i].promedioReal = equipo[i].acum/equipo[i].cont;
+        equipo[i].promedioReal=equipo[i].acum/equipo[i].cont;
     }
 
     for(i=0;i<3;i++)
@@ -453,9 +457,22 @@ void promedioReal(eAlquiler alquiler[],eEquipos equipo[],int tamA)
 }
 void informar(eCliente cliente[],eAlquiler alquiler[],int tamA,int tamC,eEquipos equipo[])
 {
-    clienteConMasReclamos(cliente,alquiler,tamC);
+    clienteConMasAlquileres(cliente,alquiler,tamC);
     mostrarAlquilerPorCliente(cliente,alquiler,tamA,tamC);
     equipoMasAlquilado(alquiler,equipo,tamA);
     promedioReal(alquiler,equipo,tamA);
 
+}
+int validarDNI(int dni,eCliente cliente[],int tam)
+{
+    int i;
+    for(i=0;i<tam;i++)
+    {
+       while(dni==cliente[i].dni)
+       {
+            printf("Error! DNI Ya utilizado, reingrese dni: ");
+            scanf("%d",&dni);
+       }
+    }
+    return dni;
 }
