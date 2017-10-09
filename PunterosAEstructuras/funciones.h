@@ -1,6 +1,9 @@
 typedef struct
 {
     int dni;
-    char nombre[25];
+    char nombre[40];
     int edad;
 }ePersona;
+
+void cargarPersona(ePersona*,int);
+int generarPersona(ePersona*,int,char[],int);

@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1507561441 source:c:\users\alumno\desktop\punterosaestructuras\funciones.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1507561067 c:\users\alumno\desktop\punterosaestructuras\funciones.h
+
+1507561420 source:c:\users\alumno\desktop\punterosaestructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+

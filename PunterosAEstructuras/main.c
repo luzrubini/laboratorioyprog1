@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "funciones.h"
+#define TAM 5
 
 int main()
 {
     system("color 0f");
     char seguir='s';
     int opcion;
+    ePersona persona[TAM];
 
     while(seguir=='s')
     {
@@ -23,6 +26,7 @@ int main()
         switch(opcion)
         {
             case 1:
+                cargarPersona(&persona,TAM);
                 break;
             case 2:
                 break;
