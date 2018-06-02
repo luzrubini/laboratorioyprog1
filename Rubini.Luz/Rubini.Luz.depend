@@ -1,46 +1,11 @@
 # depslib dependency file v1.0
-1507039684 source:c:\users\alumno\desktop\rubini.luz\lib.c
+1527946445 source:d:\rubini.luz\funciones.c
+	"funciones.h"
+
+1527946428 d:\rubini.luz\funciones.h
 	<stdio.h>
 	<stdlib.h>
-	"lib.h"
-	<string.h>
-	<ctype.h>
-	<conio.h>
 
-1507039678 c:\users\alumno\desktop\rubini.luz\lib.h
-
-1507039690 source:c:\users\alumno\desktop\rubini.luz\main.c
-	<stdio.h>
-	<stdlib.h>
-	"lib.h"
-
-1507042497 source:d:\rubini.luz\lib.c
-	<stdio.h>
-	<stdlib.h>
-	"lib.h"
-	<string.h>
-	<ctype.h>
-	<conio.h>
-
-1507042497 d:\rubini.luz\lib.h
-
-1507042504 source:d:\rubini.luz\main.c
-	<stdio.h>
-	<stdlib.h>
-	"lib.h"
-
-1507540157 source:c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\lib.c
-	<stdio.h>
-	<stdlib.h>
-	"lib.h"
-	<string.h>
-	<ctype.h>
-	<conio.h>
-
-1507540408 c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\lib.h
-
-1507539686 source:c:\users\luz\desktop\laboratorioyprog1-master\laboratorioyprog1\rubini.luz\main.c
-	<stdio.h>
-	<stdlib.h>
-	"lib.h"
+1527946735 source:d:\rubini.luz\main.c
+	"funciones.h"
 
